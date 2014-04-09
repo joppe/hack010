@@ -10,6 +10,18 @@ body {
     height: 100%;
 }
 
+#weather {
+    background: url('../img/card_air_quality.png') transparent no-repeat 0 0;
+}
+
+#reward {
+    background: url('../img/card_reward.png') transparent no-repeat 0 0;
+}
+
+#ghost {
+    background: url('../img/card_ghost.png') transparent no-repeat 0 0;
+}
+
 .weather-icon {
     display: block;
     width: 70px;

@@ -35,7 +35,13 @@
         app = (function () {
             var index = -1,
                 friend,
-                weather;
+                end,
+                weather,
+                interval;
+
+            end = new win.view.End({
+                template: $('#end-tpl')
+            }).hide();
 
             friend = new win.view.Friend({
                 template: $('#friend-tpl')
@@ -75,11 +81,17 @@
                         app: friend
                     });
 
-                    win.setInterval(function () {
+                    win.setTimeout(function () {
                         state.set({
                             notify: weather
                         });
-                    }, 4000);
+                    }, 8000);
+
+                    win.setTimeout(function () {
+                        state.set({
+                            notify: end
+                        });
+                    }, 10000);
 
                     move();
                 }

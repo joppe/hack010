@@ -18,6 +18,8 @@
         },
 
         render: function () {
+            var oldHeading;
+
             this.streetview = new google.maps.StreetViewPanorama(
                 this.$el.get(0),
                 {
@@ -34,6 +36,28 @@
                     state: 'idle'
                 });
             }, this));
+
+//            google.maps.event.addListener(this.streetview, 'links_changed', _.bind(function() {
+//                var links = this.streetview.getLinks(),
+//                    heading = _.find(links, function (link) {
+//                        var ret = false;
+//
+//                        if (oldHeading !== link.heading) {
+//                            oldHeading = link.heading;
+//                            ret = true;
+//                        }
+//
+//                        return ret;
+//                    });
+//
+//
+//                console.log(links);
+//                this.streetview.setPov({
+//                    heading: links[0].heading,
+//                    pitch: 0,
+//                    zoom: 1
+//                });
+//            }, this));
 
             return this;
         },

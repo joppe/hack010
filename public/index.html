@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/views/glass.js"></script>
     <script type="text/javascript" src="js/views/friend.js"></script>
     <script type="text/javascript" src="js/views/weather.js"></script>
+    <script type="text/javascript" src="js/views/end.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -25,7 +26,6 @@
 
     <script type="text/js-template" id="friend-tpl">
         <div id="ghost">
-            <h2 class="name">Peter</h2>
             <div id="steps">
                 <div id="step" class="left"></div>
                 <div id="step" class="right"></div>
@@ -33,10 +33,10 @@
         </div>
     </script>
     <script type="text/js-template" id="weather-tpl">
-        <div id="weather">
-            <h2>Forecast</h2>
-            <i class="weather-icon sun"></i>
-        </div>
+        <div id="weather"></div>
+    </script>
+    <script type="text/js-template" id="end-tpl">
+        <div id="reward"></div>
     </script>
 </body>
 </html>
