@@ -34,7 +34,7 @@
                 this.app.hide();
                 notifier.show();
 
-                win.setInterval(_.bind(function () {
+                win.setTimeout(_.bind(function () {
                     notifier.hide();
                     this.app.show();
                 }, this), 1000);

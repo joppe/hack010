@@ -42,10 +42,15 @@
                 friend,
                 end,
                 weather,
+                calories,
                 interval;
 
             end = new win.view.End({
                 template: $('#end-tpl')
+            }).hide();
+
+            calories = new win.view.Calories({
+                template: $('#calories-tpl')
             }).hide();
 
             friend = new win.view.Friend({
@@ -71,6 +76,10 @@
                     state.set({
                         position: position
                     });
+                } else {
+                    state.set({
+                        notify: end
+                    });
                 }
             }
 
@@ -86,15 +95,15 @@
                         app: friend
                     });
 
-                    win.setTimeout(function () {
+                    win.setInterval(function () {
                         state.set({
-                            notify: weather
+                            notify: calories
                         });
-                    }, 8000);
+                    }, 6000);
 
                     win.setTimeout(function () {
                         state.set({
-                            notify: end
+                            notify: weather
                         });
                     }, 10000);
 
