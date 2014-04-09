@@ -10,7 +10,7 @@
      */
     Util.createNamespace('view');
 
-    win.view.Calories = Backbone.View.extend({
+    win.view.Notification = Backbone.View.extend({
         initialize: function (options) {
             var template = _.template(options.template.html());
             this.$el = $(template({}));

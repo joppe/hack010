@@ -42,6 +42,7 @@
         },
 
         app: function () {
+            this.notifiers = {};
             this.app = this.model.get('app');
 
             this.$el.empty();

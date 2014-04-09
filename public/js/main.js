@@ -37,22 +37,31 @@
                 friend,
                 end,
                 weather,
-                calories,
-                interval;
+                heart,
+                air,
+                calories;
 
-            end = new win.view.End({
+            end = new win.view.Notification({
                 template: $('#end-tpl')
             }).hide();
 
-            calories = new win.view.Calories({
+            heart = new win.view.Notification({
+                template: $('#heart-tpl')
+            }).hide();
+
+            air = new win.view.Notification({
+                template: $('#air-tpl')
+            }).hide();
+
+            calories = new win.view.Notification({
                 template: $('#calories-tpl')
             }).hide();
 
-            friend = new win.view.Friend({
+            friend = new win.view.Notification({
                 template: $('#friend-tpl')
             }).hide();
 
-            weather = new win.view.Weather({
+            weather = new win.view.Notification({
                 template: $('#weather-tpl')
             }).hide();
 
@@ -73,7 +82,7 @@
                     });
                 } else {
                     state.set({
-                        notify: end
+                        app: end
                     });
                 }
             }
@@ -96,11 +105,22 @@
                         });
                     }, 6000);
 
+                    win.setInterval(function () {
+                        state.set({
+                            notify: heart
+                        });
+                    }, 5000);
+
                     win.setTimeout(function () {
                         state.set({
                             notify: weather
                         });
                     }, 10000);
+                    win.setTimeout(function () {
+                        state.set({
+                            notify: air
+                        });
+                    }, 11000);
 
                     move();
                 }

@@ -15,10 +15,7 @@
     <script type="text/javascript" src="js/models/state.js"></script>
     <script type="text/javascript" src="js/views/panorama.js"></script>
     <script type="text/javascript" src="js/views/glass.js"></script>
-    <script type="text/javascript" src="js/views/friend.js"></script>
-    <script type="text/javascript" src="js/views/weather.js"></script>
-    <script type="text/javascript" src="js/views/calories.js"></script>
-    <script type="text/javascript" src="js/views/end.js"></script>
+    <script type="text/javascript" src="js/views/notification.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -26,7 +23,7 @@
     <div class="glass"></div>
 
     <script type="text/js-template" id="friend-tpl">
-        <div id="friends">
+        <div id="friends" class="notification">
             <div id="ghost">
                 <div id="steps">
                     <div id="step" class="left"></div>
@@ -36,13 +33,19 @@
         </div>
     </script>
     <script type="text/js-template" id="weather-tpl">
-        <div id="weather"></div>
+        <div id="weather" class="notification"></div>
     </script>
     <script type="text/js-template" id="end-tpl">
-        <div id="reward"></div>
+        <div id="reward" class="notification"></div>
     </script>
     <script type="text/js-template" id="calories-tpl">
-        <div id="calories"></div>
+        <div id="calories" class="notification"></div>
+    </script>
+    <script type="text/js-template" id="heart-tpl">
+        <div id="heart" class="notification"></div>
+    </script>
+    <script type="text/js-template" id="air-tpl">
+        <div id="air" class="notification"></div>
     </script>
 </body>
 </html>
