@@ -24,6 +24,7 @@ body, .reality { background: black;}
   height: 15rem;
   background: rgba(255,255,255,.25);
   border-radius: .25rem;
+  overflow:hidden;
 }
 
 @step_speed:0.75s;
@@ -31,16 +32,20 @@ body, .reality { background: black;}
 #ghost{
 	display: inline-block;
 	position: relative;
-	width:50%;
+	width:70%;
 	top:33%;
-	left:25%;
+	left:15%;
 
-	.name{
-		position: relative;
-		top:15px;
+
+	#person{
+		position: absolute;
+		top:0;
 		right:0;
 		display:block;
 		text-align: right;
+		.name{
+			
+		}
 	}
 	
 }
@@ -48,25 +53,28 @@ body, .reality { background: black;}
 #steps{
 	position:relative;
 	margin-top:33%;
-    -webkit-transform: rotateX( 70deg) perspective(800px);
+    -webkit-transform: rotateX( 70deg) perspective(800px) scale(5.5);
+    -webkit-transform-origin:45% 50%; /* Chrome, Safari, Opera */
+    left:0;
+    width:55%;
 
 	#step{
-		border: 3px solid #999;
+		border: 5px solid hsl(255,255,255);
 		-webkit-border-radius: 50%;
-		height: 40px;
-    	width: 40px;
+		height: 50px;
+    	width: 50px;
     	position: absolute;
     	-webkit-animation: pulsate 0.75s ease-out;
 	    -webkit-animation-iteration-count: infinite;
 
 		&.left{
-		    left:40%;
+		    left:15%;
 		    top:25%;
 		    opacity: 0.0;
 		}
 
 		&.right{
-		    left:51.5%;
+		    left:40%;
 		    top:25%;
 		    margin-top:15%;
 		    opacity: 0.0;
@@ -81,4 +89,100 @@ body, .reality { background: black;}
     70% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0; margin-top:0;}
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0; margin-top:0;}
 }
+
+
+
+
+// =====
+
+
+/* heart div class - in html i used just a simple html simbol entity for heart sign, you can use text or whatever u want*/
+
+.heart {
+	font-size: 150px;
+	color: #e00;
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+
+body {
+	text-align: center;
+}
+
+
+.heart {
+	font-size: 150px;
+	color: #e00;
+
+	-webkit-animation: beat .25s infinite alternate;
+	-moz-animation: beat .25s infinite alternate;
+	-ms-animation: beat .25s infinite alternate;
+	-o-animation: beat .25s infinite alternate;
+	animation: beat .25s infinite alternate;
+
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	-o-transform-origin: center;
+	-ms-transform-origin: center;
+	transform-origin: center;
+}
+
+
+@keyframes "beat" {
+ to {
+    -webkit-transform: scale(1.4);
+   	-moz-transform: scale(1.4);
+   	-o-transform: scale(1.4);
+   	-ms-transform: scale(1.4);
+   	transform: scale(1.4);
+ }
+
+}
+
+@-moz-keyframes beat {
+ to {
+   -moz-transform: scale(1.4);
+   transform: scale(1.4);
+ }
+
+}
+
+@-webkit-keyframes "beat" {
+ to {
+   -webkit-transform: scale(1.4);
+   transform: scale(1.4);
+ }
+
+}
+
+@-ms-keyframes "beat" {
+ to {
+   -ms-transform: scale(1.4);
+   transform: scale(1.4);
+ }
+
+}
+
+@-o-keyframes "beat" {
+ to {
+   -o-transform: scale(1.4);
+   transform: scale(1.4);
+ }
+
+}
+
+
+
+
+
+
+
+
+
 
