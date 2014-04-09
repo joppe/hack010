@@ -13,8 +13,10 @@ function updateFontSize(ev) {
         face2canvasRatio = videoWidth/faceWidth;
 
     rootSize = Math.round(face2canvasRatio*10)/10 - 1.5 + 1;  
+    timeAppend = Math.round(face2canvasRatio*10)/10 - 1.5 + 1;  
     console.log(rootSize);
-    $('.glass').css('-webkit-transform','scale('+rootSize+')');
+    $('#steps').css('-webkit-transform','rotateX(70deg) perspective(800px) scale('+rootSize+')');
+    $('.time').append(timeAppend);
 }
 
 
