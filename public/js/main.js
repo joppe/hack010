@@ -1,4 +1,4 @@
-/*global window, jQuery*/
+/*global window, jQuery, _*/
 
 (function (win) {
     'use strict';
@@ -10,6 +10,7 @@
             positions,
             panorama,
             glass,
+            mini,
             app;
 
         state = new win.model.State({
@@ -22,15 +23,15 @@
             state: state
         });
 
-        airQuality = new win.model.AirQuality([], {
-            baseUrl: BASE_URL,
-            state: state
-        });
-
         panorama = new win.view.Panorama({
             model: state,
             el: $('#streetview')
         }).render();
+
+        mini = new win.view.Mini({
+            model: state,
+            el: $('.glass')
+        });
 
         glass = new win.view.Glass({
             model: state,
@@ -44,7 +45,8 @@
                 weather,
                 heart,
                 air,
-                calories;
+                calories,
+                intervals = [];
 
             end = new win.view.Notification({
                 template: $('#end-tpl')
@@ -89,6 +91,10 @@
                     state.set({
                         app: end
                     });
+
+                    _.each(intervals, function (interval) {
+                        win.clearInterval(interval);
+                    });
                 }
             }
 
@@ -104,17 +110,17 @@
                         app: friend
                     });
 
-                    win.setInterval(function () {
+                    intervals.push(win.setInterval(function () {
                         state.set({
                             notify: calories
                         });
-                    }, 6000);
+                    }, 6000));
 
-                    win.setInterval(function () {
+                    intervals.push(win.setInterval(function () {
                         state.set({
                             notify: heart
                         });
-                    }, 5000);
+                    }, 5000));
 
                     win.setTimeout(function () {
                         state.set({
