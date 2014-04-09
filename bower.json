@@ -1,0 +1,21 @@
+{
+  "name": "hack010",
+  "version": "0.0.1",
+  "homepage": "https://github.com/joppe/hack010",
+  "authors": [
+    "Joppe Aarts <joppe@apestaartje.info>"
+  ],
+  "description": "Hackaton Rotterdam",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11",
+    "backbone": "~1.1.2"
+  }
+}
