@@ -2,6 +2,9 @@
 <html>
 <head>
     <title>Hackaton demo</title>
+    <link rel="stylesheet" href="steps_animation/assets/css/core.css"/>
+    <link rel="stylesheet" href="steps_animation/assets/css/glass.css"/>
+    <link rel="stylesheet" href="css/screen.css"/>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/json2/json2.js"></script>
@@ -11,9 +14,29 @@
     <script type="text/javascript" src="js/models/position.js"></script>
     <script type="text/javascript" src="js/models/state.js"></script>
     <script type="text/javascript" src="js/views/panorama.js"></script>
+    <script type="text/javascript" src="js/views/glass.js"></script>
+    <script type="text/javascript" src="js/views/friend.js"></script>
+    <script type="text/javascript" src="js/views/weather.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <div id="streetview"></div>
+    <div class="glass"></div>
+
+    <script type="text/js-template" id="friend-tpl">
+        <div id="ghost">
+            <h2 class="name">Peter</h2>
+            <div id="steps">
+                <div id="step" class="left"></div>
+                <div id="step" class="right"></div>
+            </div>
+        </div>
+    </script>
+    <script type="text/js-template" id="weather-tpl">
+        <div id="weather">
+            <h2>Forecast</h2>
+            <i class="weather-icon sun"></i>
+        </div>
+    </script>
 </body>
 </html>

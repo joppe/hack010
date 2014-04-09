@@ -22,7 +22,7 @@
         },
 
         url: function () {
-            return this.baseUrl + '/data/hackaton.gpx.json';
+            return this.baseUrl + '/data/bruggenroute.gpx.json';
         },
 
         parse: function (response) {

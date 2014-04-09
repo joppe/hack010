@@ -9,7 +9,8 @@
         var state,
             positions,
             panorama,
-            runner;
+            glass,
+            app;
 
         state = new win.model.State({
             status: 'idle',
@@ -24,12 +25,27 @@
         panorama = new win.view.Panorama({
             model: state,
             el: $('#streetview')
-        });
+        }).render();
 
-        runner = (function () {
-            var index = -1;
+        glass = new win.view.Glass({
+            model: state,
+            el: $('.glass')
+        }).render();
 
-            function run() {
+        app = (function () {
+            var index = -1,
+                friend,
+                weather;
+
+            friend = new win.view.Friend({
+                template: $('#friend-tpl')
+            }).hide();
+
+            weather = new win.view.Weather({
+                template: $('#weather-tpl')
+            }).hide();
+
+            function move() {
                 var position;
 
                 if (index === -1) {
@@ -51,19 +67,28 @@
                 run: function () {
                     state.on('change:state', function () {
                         if (state.get('state') === 'idle') {
-                            win.setTimeout(run, state.get('interval'));
+                            win.setTimeout(move, state.get('interval'));
                         }
                     });
 
-                    run();
+                    state.set({
+                        app: friend
+                    });
+
+                    win.setInterval(function () {
+                        state.set({
+                            notify: weather
+                        });
+                    }, 2000);
+
+                    move();
                 }
             };
         }());
 
         positions.fetch({
             success: function () {
-                console.log(positions);
-                runner.run();
+                app.run();
             }
         });
 

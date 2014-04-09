@@ -1,4 +1,4 @@
-/*global window, _, jQuery*/
+/*global window, _, jQuery, google*/
 
 /*global window, Util, Backbone*/
 
@@ -6,38 +6,53 @@
     'use strict';
 
     /**
-     * @namespace streetview
+     * @namespace view
      */
     Util.createNamespace('view');
 
     win.view.Panorama = Backbone.View.extend({
+        point: null,
+
         initialize: function () {
             this.model.on('change:position', _.bind(this.update, this));
         },
 
+        render: function () {
+            this.streetview = new google.maps.StreetViewPanorama(
+                this.$el.get(0),
+                {
+                    disableDefaultUI: true,
+                    pov: {
+                        heading: 165,
+                        pitch: 0
+                    },
+                    zoom: 1
+                });
+
+            google.maps.event.addListener(this.streetview, 'position_changed', _.bind(function () {
+                this.model.set({
+                    state: 'idle'
+                });
+            }, this));
+
+            return this;
+        },
+
         update: function () {
             var position = this.model.get('position'),
-                lat = position.get('@lat'),
-                lon = position.get('@lon'),
-                src = 'http://maps.googleapis.com/maps/api/streetview?size=400x400&location=' + lat + ',' + lon + '&sensor=false',
-                $img = $('<img>');
+                lat = parseFloat(position.get('@lat')),
+                lon = parseFloat(position.get('@lon'));
 
             this.model.set({
                 state: 'preloading'
             });
-
-            $img.on({
-                load: _.bind(function () {
-                    this.$el.html($img);
-                    this.model.set({
-                        state: 'idle'
-                    });
-                    console.log(this.model.attributes);
-                }, this)
+            this.streetview.setPosition({
+                lat: lat,
+                lng: lon
             });
+            this.streetview.setVisible(true);
 
-            $img.attr('src', src);
-            console.log(src, 'set');
+            return this;
         }
     });
 }(window, jQuery));
