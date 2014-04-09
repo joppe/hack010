@@ -17,8 +17,8 @@
 
         update: function () {
             var pano = this.model.get('pano'),
-                src = 'http://maps.googleapis.com/maps/api/streetview?size=380x250&pano=' + pano + '&pitch=0&zoom=1&sensor=false';
-            console.log(src);
+                src = 'http://maps.googleapis.com/maps/api/streetview?size=384x250&pano=' + pano + '&pitch=0&zoom=1&sensor=false';
+
             this.$el.css({
                 backgroundImage: 'url("' + src + '")'
             });
