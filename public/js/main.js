@@ -22,6 +22,11 @@
             state: state
         });
 
+        airQuality = new win.model.AirQuality([], {
+            baseUrl: BASE_URL,
+            state: state
+        });
+
         panorama = new win.view.Panorama({
             model: state,
             el: $('#streetview')
