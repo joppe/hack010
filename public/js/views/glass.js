@@ -11,23 +11,34 @@
     Util.createNamespace('view');
 
     win.view.Glass = Backbone.View.extend({
+        notifiers: {},
+
         initialize: function () {
             this.model.on('change:notify', _.bind(this.notify, this));
             this.model.on('change:app', _.bind(this.app, this));
         },
 
         notify: function () {
-            console.log('notify');
             var notifier = this.model.get('notify');
 
-            this.$el.append(notifier.$el);
-            this.app.hide();
-            notifier.show();
+            if (notifier !== null) {
+                this.model.set({
+                    notify: null
+                });
 
-            win.setTimeout(_.bind(function () {
-                notifier.hide();
-                this.app.show();
-            }, this), 1000);
+                if (this.notifiers[notifier.cid] === undefined) {
+                    this.notifiers[notifier.cid] = notifier;
+                    this.$el.append(notifier.$el);
+                }
+
+                this.app.hide();
+                notifier.show();
+
+                win.setInterval(_.bind(function () {
+                    notifier.hide();
+                    this.app.show();
+                }, this), 1000);
+            }
         },
 
         app: function () {

@@ -79,7 +79,7 @@
                         state.set({
                             notify: weather
                         });
-                    }, 2000);
+                    }, 4000);
 
                     move();
                 }
