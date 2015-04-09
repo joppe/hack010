@@ -5,7 +5,7 @@
  * @copyright Apestaartje <http://apestaartje.info>
  */
 
-(function (z) {
+(function (z, $) {
     'use strict';
 
     /**
@@ -20,7 +20,7 @@
         initialize: function (options) {
             var template = _.template(options.template);
 
-            this.$el = template({});
+            this.$el = $(template({}));
         }
     });
-}(zicht));
+}(zicht, jQuery));
