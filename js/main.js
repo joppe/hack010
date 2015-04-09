@@ -26,7 +26,7 @@
 
         initialize = function () {
             win.setTimeout(function () {
-                win.document.location.hash = 'map';
+                win.document.location.hash = 'compass';
             }, 2000);
         };
 
