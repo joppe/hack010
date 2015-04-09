@@ -9,6 +9,7 @@ $event-list-active-border: $green-jewel;
 
 
 .c-event-list__item {
+    position: relative;
 	margin-bottom: 1em;
 	padding: 1em;
 	color: $event-list-item-text;
@@ -46,4 +47,18 @@ $event-list-active-border: $green-jewel;
 	.is-active & {
 		display: block;
 	}
+}
+
+.c-event-list__item__proceed {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+
+    .is-active & {
+        display: block;
+    }
 }

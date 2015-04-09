@@ -17,7 +17,8 @@
 
     presentation.view.Event = presentation.view.Abstract.extend({
         events: {
-            'click a': 'onClick'
+            'click a': 'onClick',
+            'click img': 'proceed'
         },
 
         initialize: function (options) {
@@ -33,6 +34,9 @@
             this.$el.find('[href="#' + event + '"]').parent().addClass(ACTIVE_CLASS);
         },
 
+        /**
+         * @param {Event} event
+         */
         onClick: function (event) {
             event.preventDefault();
 
@@ -43,6 +47,10 @@
             }
 
             this.model.set('event', $el.attr('href').replace('#', ''));
+        },
+
+        proceed: function () {
+            window.document.location.hash = 'map';
         }
     });
 }(zicht, jQuery));
