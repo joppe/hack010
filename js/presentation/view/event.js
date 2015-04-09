@@ -28,7 +28,7 @@
 
         update: function () {
             var event = this.model.get('event');
-            console.log(event);
+
             this.$el.find('.' + ACTIVE_CLASS).removeClass(ACTIVE_CLASS);
             this.$el.find('[href="#' + event + '"]').addClass(ACTIVE_CLASS);
         },
@@ -37,7 +37,7 @@
             event.preventDefault();
 
             var $el = $(event.target);
-            console.log('onClick', $el.attr('href').replace('#', ''));
+
             this.model.set('event', $el.attr('href').replace('#', ''));
         }
     });
