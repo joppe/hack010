@@ -1,0 +1,27 @@
+﻿
+/**
+ * Object class for high-level styling of lists as interface elements./
+ */
+.o-interface-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/** 
+ * A list with horizontal items.
+ */
+.o-interface-list--inline {
+	overflow: hidden;
+}
+
+
+
+/**
+ * An item inside the list.
+ */
+.o-interface-list__item {
+	.o-interface-list--inline & {
+		float: left;
+	}
+}

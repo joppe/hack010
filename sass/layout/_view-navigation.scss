@@ -1,0 +1,29 @@
+﻿
+/* Local variables */
+$navigation-item-background: $green-jewel;
+
+
+/**
+ * Navigation for switching between watch views.
+ * 
+ * 1. Align the navigation below the watch/
+ */
+.view-navigation {
+	margin: 0 auto 4em auto; /* [1] */
+	padding: 1em;
+	width: 200px;
+	text-align: center;
+}
+
+
+
+/** 
+ * The actual clickable link.
+ */
+.view-navigation__link {
+	width: 1em;
+	height: 1em;
+	margin-right: 0.5em; 
+	background-color: $navigation-item-background;
+	border-radius: 100%;
+}

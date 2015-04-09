@@ -1,0 +1,11 @@
+﻿
+/**
+ * Utility for hiding text inside an element.
+ *
+ * 1. Sends the text off-screen
+ */
+.u-hide-text {
+	display: block;
+	text-indent: -9999px; /* [1] */
+    white-space: nowrap;
+}
