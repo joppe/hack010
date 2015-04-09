@@ -12,3 +12,6 @@ html, body, #map-canvas {
 	background-color: #fff;
 	padding: 10px 20px;
 }
+.toggle-icon {
+	margin: 0 15px;
+}
