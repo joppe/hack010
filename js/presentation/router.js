@@ -18,7 +18,8 @@
             'splash': 'splash',
             'intro': 'intro',
             'event': 'event',
-            'map': 'map'
+            'map': 'map',
+            'compass': 'compass'
         },
 
         initialize: function (options) {
@@ -46,6 +47,13 @@
         event: function () {
             this.setActive('event', new presentation.view.Event({
                 template: $('#event-tpl').html(),
+                model: this.model
+            }));
+        },
+
+        compass: function () {
+            this.setActive('compass', new presentation.view.Compass({
+                template: $('#compass-tpl').html(),
                 model: this.model
             }));
         },

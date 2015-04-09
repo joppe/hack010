@@ -13,7 +13,7 @@
      */
     z.createNamespace('presentation.view');
 
-    presentation.view.Intro = presentation.view.Abstract.extend({
+    presentation.view.Compass = presentation.view.Abstract.extend({
 
     });
 }(zicht, jQuery));
