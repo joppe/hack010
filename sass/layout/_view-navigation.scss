@@ -24,7 +24,8 @@ $navigation-item-background-active: rgba($green-jewel, 0.5);
 .view-navigation__link {
 	width: 1em;
 	height: 1em;
-	margin-right: 0.5em; 
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
 	background-color: $navigation-item-background;
 	border-radius: 100%;
 
