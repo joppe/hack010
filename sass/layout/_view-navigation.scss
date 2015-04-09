@@ -1,6 +1,7 @@
 ﻿
 /* Local variables */
 $navigation-item-background: $green-jewel;
+$navigation-item-background-active: rgba($green-jewel, 0.5);
 
 
 /**
@@ -26,4 +27,8 @@ $navigation-item-background: $green-jewel;
 	margin-right: 0.5em; 
 	background-color: $navigation-item-background;
 	border-radius: 100%;
+
+	&.is-active {
+		background-color: $navigation-item-background-active;
+	}
 }
