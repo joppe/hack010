@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "homepage": "https://github.com/joppe/hack010",
   "authors": [
-    "Joppe Aarts <joppe@apestaartje.info>"
+    "Joppe Aarts <joppe@apestaartje.info>",
+	"Mick van Dijk <pmvd90@gmail.com>",
+	"Robert van Kempen <robert@donormail.com>"
   ],
   "description": "Hack010 IoT",
   "keywords": [
