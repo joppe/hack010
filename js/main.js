@@ -8,7 +8,7 @@
 (function (win, $) {
     'use strict';
 
-    var state = new presentation.Model.Presentation();
+    var state = new presentation.model.Presentation();
 
     new presentation.view.Navigation({
         model: state,
