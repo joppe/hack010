@@ -8,6 +8,8 @@
 (function (z, $) {
     'use strict';
 
+    var ACTIVE_CLASS = 'is-active';
+
     /**
      * @namespace presentation.view
      */
@@ -15,7 +17,7 @@
 
     presentation.view.Navigation = Backbone.View.extend({
         events: {
-            'click': 'onClick'
+            'click a': 'onClick'
         },
 
         initialize: function () {
@@ -25,14 +27,14 @@
         update: function () {
             var slide = this.model.get('slide');
 
-            this.$el.find('.active').removeClass('active');
-            this.$el.find('[href="#' + slide + '"]').addClass('active');
+            this.$el.find('.' + ACTIVE_CLASS).removeClass(ACTIVE_CLASS);
+            this.$el.find('[href="#' + slide + '"]').addClass(ACTIVE_CLASS);
         },
 
         onClick: function (event) {
             var $el = $(event.target);
 
-            this.model.set('slide', $el.attr('href').replace('#'));
+            this.model.set('slide', $el.attr('href').replace('#', ''));
         }
     });
 }(zicht, jQuery));

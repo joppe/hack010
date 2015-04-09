@@ -31,7 +31,8 @@
             this.model.set('slide', 'splash');
 
             this.setActive(new presentation.view.Splash({
-                template: $('#splash-tpl').html()
+                template: $('#splash-tpl').html(),
+                model: this.model
             }));
         },
 
@@ -39,7 +40,8 @@
             this.model.set('slide', 'intro');
 
             this.setActive(new presentation.view.Splash({
-                template: $('#intro-tpl').html()
+                template: $('#intro-tpl').html(),
+                model: this.model
             }));
         },
 
@@ -47,7 +49,8 @@
             this.model.set('slide', 'event');
 
             this.setActive(new presentation.view.Event({
-                template: $('#event-tpl').html()
+                template: $('#event-tpl').html(),
+                model: this.model
             }));
         },
 
