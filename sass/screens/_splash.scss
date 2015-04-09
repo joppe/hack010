@@ -1,16 +1,16 @@
 @import './../vars/colors';
 
 /* Local variables */
-$splash-background: $grey-shark;
 $splash-text: rgba($white, 0.8);
+$splash-title: $green-emerald;
 
 
 /**
  * First screen of the app.
  */
 .s-splash {
-	background-color: $splash-background;
 	color: $splash-text;
+	background-image: none;
 }
 
 
@@ -44,6 +44,7 @@ $splash-text: rgba($white, 0.8);
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2rem;
+	color: $splash-title;
 }
 
 
