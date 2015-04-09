@@ -14,6 +14,6 @@
     z.createNamespace('presentation.view');
 
     presentation.view.Splash = presentation.view.Abstract.extend({
-
+        
     });
 }(zicht, jQuery));
