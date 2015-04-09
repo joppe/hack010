@@ -1,0 +1,16 @@
+@import './../vars/colors';
+
+/* Local variables */
+$screen-background: $white;
+
+
+/**
+ * Basic styling for each watch screen.
+ */
+.s-screen {
+    width: 100%;
+    min-height: 100%;
+	padding: 1em;
+    background-color: $screen-background;
+	border-radius: 6px;
+}

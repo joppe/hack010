@@ -1,0 +1,60 @@
+@import './../vars/colors';
+
+
+/* Local variables */
+$splash-background: $grey-shark;
+$splash-text: rgba($white, 0.8);
+
+
+/**
+ * First screen of the app.
+ */
+.s-splash {
+	background-color: $splash-background;
+	color: $splash-text;
+}
+
+
+
+/**
+ * Wrapper for the logo.
+ */
+.s-splash__figure {
+	margin: 1em 0 0 0;
+}
+
+
+
+/**
+ * The actual logo image.
+ */
+.s-splash__logo {
+	display: block;
+	width: 50%;
+	margin: 0 auto 2em auto;
+}
+
+
+
+/**
+ * The name of the app.
+ */
+.s-splash__title {
+	margin-bottom: 1em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+
+
+/**
+ * The loading animation image.
+ */
+.s-splash__loader {
+	display: block;
+	margin: 0 auto;
+	width: 64px;
+	height: 64px;
+}
