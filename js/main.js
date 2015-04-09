@@ -1,4 +1,4 @@
-/*global window, google*/
+/*global window, presentation*/
 
 /**
  * @author Joppe Aarts <joppe@apestaartje.info>
@@ -8,17 +8,14 @@
 (function (win, $) {
     'use strict';
 
-    var initialize;
+    var state = new presentation.Model.Presentation();
 
-    initialize = function () {
-        var latitude = 51.917577,
-            longitude = 4.482045,
-            mapOptions = {
-                zoom: 8,
-                center: new google.maps.LatLng(latitude, longitude)
-            },
-            map = new google.maps.Map($('map').get(0), mapOptions);
-    };
+    new presentation.view.Navigation({
+        model: state,
+        el: $('.js-slide-navigation')
+    });
 
-    google.maps.event.addDomListener(win, 'load', initialize);
+    new presentation.Router({
+        model: state
+    });
 }(window, jQuery));
