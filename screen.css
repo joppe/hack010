@@ -205,6 +205,9 @@ p {
     z-index: 5;
     background-color: #fff;
     padding: 10px 20px; }
+    a {
+      margin: 0 15px;
+    }
   .s-map #map-canvas {
     width: 100%;
     height: 100%; }

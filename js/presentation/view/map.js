@@ -113,6 +113,7 @@
             }
 
             $el.data('is-showing', !isShowing);
+            $el.find('img').toggle();
         },
 
         /**
