@@ -18,18 +18,24 @@
       	<input onclick="hide();" type=button value="Hide Markers">
       	<input onclick="show();" type=button value="Show All Markers">
 
-      	<input id="test" onclick="hide('locations');" type=button value="Hide Locations">
+      	<input onclick="hide('locations');" type=button value="Hide Locations">
       	<input onclick="hide('guides');" type=button value="Hide Guides">
       	<input onclick="hide('users');" type=button value="Hide Users">
 
-      	<div id="locationToggle">
+      	<span id="locationToggle">
       		<img src="../img/icon_location.png">
       		<img src="../img/icon_guide.png" style="display:none"> 
-      	</div>
+      	</span>
 
+        <span id="guideToggle">
+            <img src="../img/icon_guide.png">
+            <img src="../img/icon_location.png" style="display:none"> 
+        </span>
 
-      	<img src="../img/icon_guide.png">
-      	<img src="../img/icon_user.png">
+        <span id="userToggle">
+            <img src="../img/icon_user.png">
+            <img src="../img/icon_location.png" style="display:none"> 
+        </span>
     </div>
     <div id="map-canvas"></div>
 

@@ -1,0 +1,149 @@
+/* Variables */
+/* Green hues */
+/* B&W */
+/* Base styling */
+/**
+ * Basic typography.
+ */
+h1 {
+  margin: 0 0 1em 0; }
+
+p {
+  margin: 0 0 1em 0; }
+
+/* Basic layout */
+/* Green hues */
+/* B&W */
+/* Local variables */
+/**
+ * Wrapper for displaying presentation different info per view.
+ */
+.view-info {
+  position: fixed;
+  top: 2em;
+  left: 2em;
+  padding: 1em 2em;
+  width: 250px;
+  border-radius: 6px;
+  background-color: #199343; }
+
+/**
+ * Info title.
+ */
+.view-info__title {
+  color: #fff; }
+
+/**
+  * Body copy.
+  */
+.view-info__body {
+  color: rgba(255, 255, 255, 0.7); }
+
+/* Local variables */
+/**
+ * Navigation for switching between watch views.
+ * 
+ * 1. Align the navigation below the watch/
+ */
+.view-navigation {
+  margin: 0 auto 4em auto;
+  /* [1] */
+  padding: 1em;
+  width: 200px;
+  text-align: center; }
+
+/** 
+ * The actual clickable link.
+ */
+.view-navigation__link {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  background-color: #199343;
+  border-radius: 100%; }
+  .view-navigation__link.is-active {
+    background-color: rgba(25, 147, 67, 0.5); }
+
+/**
+ * Wrapper that display the watch image.
+ */
+.watch {
+  position: relative;
+  width: 531px;
+  height: 1061px;
+  margin: 4em auto;
+  background-image: url('../img/watch-background.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover; }
+
+/**
+ * Container for displaying different views inside the watch.
+ */
+.watch__content {
+  position: relative;
+  top: 323px;
+  left: 41px;
+  width: 449px;
+  height: 441px;
+  border-radius: 6px; }
+
+/* Objects */
+/**
+ * Object class for high-level styling of lists as interface elements./
+ */
+.o-interface-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+/** 
+ * A list with horizontal items.
+ */
+.o-interface-list--inline {
+  overflow: hidden; }
+
+/**
+ * An item inside the list.
+ */
+.o-interface-list--inline .o-interface-list__item {
+  float: left; }
+
+/* Screens */
+/* Green hues */
+/* B&W */
+.screen {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff; }
+
+/* Utilties */
+/**
+ * Utility for making an entire block clickable;
+ */
+.u-block-link {
+  display: block;
+  text-decoration: none; }
+
+/**
+ * Utility for hiding text inside an element.
+ *
+ * 1. Sends the text off-screen
+ */
+.u-hide-text {
+  display: block;
+  text-indent: -9999px;
+  /* [1] */
+  white-space: nowrap; }
+
+/**
+ * Utility class for clearing all margins for an element.
+ */
+.u-no-margin {
+  margin: 0; }
+
+/**
+ * Utility class for making sure an element can be controlled with text-control;
+ */
+.u-text-alignable {
+  display: inline-block; }

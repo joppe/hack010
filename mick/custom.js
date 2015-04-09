@@ -164,6 +164,48 @@ function show(type) {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-$("#locationToggle").click(function() {
-    $(this).find('img').toggle();
-});
+$("#locationToggle").click((function () {
+	var isShowing = true;
+
+	return function () {
+		if (true === isShowing) {
+			hide('locations');
+		} else {
+			show('locations');
+		}
+
+		isShowing = !isShowing;
+		$(this).find('img').toggle();
+	}
+}()));
+
+$("#guideToggle").click((function () {
+	var isShowing = true;
+
+	return function () {
+		if (true === isShowing) {
+			hide('guides');
+		} else {
+			show('guides');
+		}
+
+		isShowing = !isShowing;
+		$(this).find('img').toggle();
+	}
+}()));
+
+
+$("#userToggle").click((function () {
+	var isShowing = true;
+
+	return function () {
+		if (true === isShowing) {
+			hide('users');
+		} else {
+			show('users');
+		}
+
+		isShowing = !isShowing;
+		$(this).find('img').toggle();
+	}
+}()));
