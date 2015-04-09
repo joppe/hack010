@@ -8,17 +8,19 @@
 (function (win, $) {
     'use strict';
 
-    var state = new presentation.model.Presentation();
+    $(function () {
+        var state = new presentation.model.Presentation();
 
-    new presentation.view.Navigation({
-        model: state,
-        el: $('.js-slide-navigation')
+        new presentation.view.Navigation({
+            model: state,
+            el: $('.js-slide-navigation')
+        });
+
+        new presentation.Router({
+            model: state,
+            $container: $('.js-watch-views')
+        });
+
+        Backbone.history.start();
     });
-
-    new presentation.Router({
-        model: state,
-        $container: $('.js-watch-views')
-    });
-
-    Backbone.history.start();
 }(window, jQuery));
