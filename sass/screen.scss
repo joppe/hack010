@@ -4,6 +4,7 @@
 
 
 /* Base styling */
+@import './base/box-sizing';
 @import './base/typography';
 
 
@@ -18,8 +19,8 @@
 
 
 /* Screens */
-@import './screen/base';
-@import './screen/splash';
+@import './screens/screen';
+@import './screens/splash';
 
 
 /* Utilties */
