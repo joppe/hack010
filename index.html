@@ -7,6 +7,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" type="text/css">
         <link rel="stylesheet" href="css/screen.css" type="text/css">
+        <script src="//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/underscore/underscore-min.js"></script>
         <script src="bower_components/backbone/backbone.js"></script>
@@ -67,7 +68,32 @@
         </script>
 
         <script type="text/js-template" id="map-tpl">
-            <div class="screen  screen--map" id="map"></div>
+            <div class="screen  screen--map">
+                <div id="panel">
+                    <input data-action="hide" type="button" value="Hide Markers">
+                    <input data-action="show" type="button" value="Show All Markers">
+
+                    <input onclick="hide('locations');" type="button" value="Hide Locations">
+                    <input onclick="hide('guides');" type="button" value="Hide Guides">
+                    <input onclick="hide('users');" type="button" value="Hide Users">
+
+                    <span id="locationToggle">
+                        <img src="../img/icon_location.png">
+                        <img src="../img/icon_guide.png" style="display:none">
+                    </span>
+
+                    <span id="guideToggle">
+                        <img src="../img/icon_guide.png">
+                        <img src="../img/icon_location.png" style="display:none">
+                    </span>
+
+                    <span id="userToggle">
+                        <img src="../img/icon_user.png">
+                        <img src="../img/icon_location.png" style="display:none">
+                    </span>
+                </div>
+                <div id="map-canvas"></div>
+            </div>
         </script>
 
         <script type="text/js-template" id="event-tpl">
