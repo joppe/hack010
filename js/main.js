@@ -1,4 +1,4 @@
-/*global window, presentation, Backbone*/
+/*global window, presentation, Backbone, google*/
 
 /**
  * @author Joppe Aarts <joppe@apestaartje.info>
@@ -9,7 +9,8 @@
     'use strict';
 
     $(function () {
-        var state = new presentation.model.Presentation();
+        var initialize,
+            state = new presentation.model.Presentation();
 
         new presentation.view.Navigation({
             model: state,
@@ -22,5 +23,15 @@
         });
 
         Backbone.history.start();
+
+        initialize = function () {
+            win.setTimeout(function () {
+                win.document.location.hash = 'intro';
+            }, 2000);
+        };
+
+        win.document.location.hash = 'splash';
+
+        google.maps.event.addDomListener(window, 'load', initialize);
     });
 }(window, jQuery));
