@@ -1,0 +1,29 @@
+﻿
+/* Local variables */
+$slide-background: $white;
+
+
+.slide {
+	position: absolute;
+	left: 180px;
+	padding: 1.5em 3em;
+	background-color: $slide-background;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50%;
+	cursor: pointer;
+}
+
+
+
+.slide--up {
+	bottom: 0;
+	background-image: url('./../img/slide-up.png');
+}
+
+
+
+.slide--down {
+	top: 0;
+	background-image: url('./../img/slide-down.png');
+}

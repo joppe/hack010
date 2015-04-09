@@ -1,0 +1,23 @@
+﻿/* Local variables */
+$intro-background: $grey-nobel;
+
+
+
+.s-intro { 
+    background-color: $intro-background;
+	font-weight: 700;
+}
+
+
+/**
+ * List of instructions.
+ *
+ * 1. Correct the alignment for the 
+ */
+.s-intro__list {
+	width: 80%;
+	margin: 2em auto 0 auto;
+	padding-left: 1.5em;
+	font-size: 1.8rem;
+	list-style-position: outside;
+}

@@ -8,6 +8,7 @@ $screen-background: $white;
  * Basic styling for each watch screen.
  */
 .s-screen {
+	position: relative;
     width: 100%;
     min-height: 100%;
 	padding: 1em;

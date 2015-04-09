@@ -1,7 +1,13 @@
-﻿
+﻿@import './../vars/fonts';
+
+
 /**
  * Basic typography.
  */
+body {
+	font-family: $font-sans;
+}
+
 h1 {
 	margin: 0 0 1em 0;
 }
