@@ -1,4 +1,4 @@
-/*global window, presentation*/
+/*global window, presentation, Backbone*/
 
 /**
  * @author Joppe Aarts <joppe@apestaartje.info>
@@ -16,6 +16,9 @@
     });
 
     new presentation.Router({
-        model: state
+        model: state,
+        $container: $('.js-watch-views')
     });
+
+    Backbone.history.start();
 }(window, jQuery));

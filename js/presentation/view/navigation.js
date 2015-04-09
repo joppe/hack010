@@ -26,13 +26,13 @@
             var slide = this.model.get('slide');
 
             this.$el.find('.active').removeClass('active');
-            this.$el.find('[data-slide="' + slide + '"]').addClass('active');
+            this.$el.find('[href="#' + slide + '"]').addClass('active');
         },
 
         onClick: function (event) {
             var $el = $(event.target);
 
-            this.model.set('slide', $el.data('slide'));
+            this.model.set('slide', $el.attr('href').replace('#'));
         }
     });
 }(zicht, jQuery));

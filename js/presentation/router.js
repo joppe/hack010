@@ -21,6 +21,7 @@
 
         initialize: function (options) {
             this.model = options.model;
+            this.$container = options.$container;
         },
 
         splash: function () {
