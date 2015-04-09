@@ -15,27 +15,20 @@
 <body>
 
 	<div id="panel">
-      	<input onclick="hide();" type=button value="Hide Markers">
-      	<input onclick="show();" type=button value="Show All Markers">
-
-      	<input onclick="hide('locations');" type=button value="Hide Locations">
-      	<input onclick="hide('guides');" type=button value="Hide Guides">
-      	<input onclick="hide('users');" type=button value="Hide Users">
-
-      	<span id="locationToggle">
-      		<img src="../img/icon_location.png">
-      		<img src="../img/icon_guide.png" style="display:none"> 
-      	</span>
-
         <span id="guideToggle">
-            <img src="../img/icon_guide.png">
-            <img src="../img/icon_location.png" style="display:none"> 
+            <img src="../img/icon_guide_bottom.png">
+            <img src="../img/icon_guide_bottom_off.png" style="display:none"> 
         </span>
 
         <span id="userToggle">
-            <img src="../img/icon_user.png">
-            <img src="../img/icon_location.png" style="display:none"> 
+            <img src="../img/icon_user_bottom.png">
+            <img src="../img/icon_user_bottom_off.png" style="display:none"> 
         </span>
+
+      	<span id="locationToggle">
+      		<img src="../img/icon_location_bottom.png">
+      		<img src="../img/icon_location_bottom_off.png" style="display:none"> 
+      	</span>
     </div>
     <div id="map-canvas"></div>
 
