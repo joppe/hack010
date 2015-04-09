@@ -4,8 +4,8 @@
   "homepage": "https://github.com/joppe/hack010",
   "authors": [
     "Joppe Aarts <joppe@apestaartje.info>",
-	"Mick van Dijk <pmvd90@gmail.com>",
-	"Robert van Kempen <robert@donormail.com>"
+    "Mick van Dijk <pmvd90@gmail.com>",
+    "Robert van Kempen <robert@donormail.com>"
   ],
   "description": "Hack010 IoT",
   "keywords": [
@@ -22,6 +22,7 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.3.4",
     "backbone": "~1.1.2",
-    "jquery": "1"
+    "jquery": "1",
+    "normalize.css": "~3.0.3"
   }
 }
