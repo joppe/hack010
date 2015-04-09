@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HACK010</title>
+    <link rel="stylesheet" href="../css/screen.css"/>
+    <link rel="stylesheet" href="stylesheet.css"/>
+
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="../bower_components/backbone/backbone.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+</head>
+<body>
+
+	<div id="panel">
+      	<input onclick="hide();" type=button value="Hide Markers">
+      	<input onclick="show();" type=button value="Show All Markers">
+
+      	<input id="test" onclick="hide('locations');" type=button value="Hide Locations">
+      	<input onclick="hide('guides');" type=button value="Hide Guides">
+      	<input onclick="hide('users');" type=button value="Hide Users">
+
+      	<div id="locationToggle">
+      		<img src="../img/icon_location.png">
+      		<img src="../img/icon_guide.png" style="display:none"> 
+      	</div>
+
+
+      	<img src="../img/icon_guide.png">
+      	<img src="../img/icon_user.png">
+    </div>
+    <div id="map-canvas"></div>
+
+    <script type="text/javascript" src="custom.js"></script>
+</body>
+</html>
