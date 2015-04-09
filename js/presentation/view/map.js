@@ -49,7 +49,9 @@
                 guides: [],
                 users: []
             };
+        },
 
+        initMap: function () {
             this.map = new google.maps.Map(this.$el.find('#map-canvas').get(0), mapOptions);
 
             _.each(geolocations, function (geolocation) {

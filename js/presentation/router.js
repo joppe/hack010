@@ -51,10 +51,14 @@
         },
 
         map: function () {
-            this.setActive('map', new presentation.view.Map({
+            var map = new presentation.view.Map({
                 template: $('#map-tpl').html(),
                 model: this.model
-            }));
+            });
+
+            this.setActive('map', map);
+
+            map.initMap();
         },
 
         setActive: function (identifier, view) {
