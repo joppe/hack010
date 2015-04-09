@@ -1,0 +1,38 @@
+﻿@import './../vars/colors';
+
+
+/* Local variables */
+$event-list-item-background: $white;
+$event-list-item-title: $green-jewel;
+$event-list-item-text: rgba($green-jewel, 0.75);
+
+
+.c-event-list__item {
+	margin-bottom: 1em;
+	padding: 1em;
+	color: $event-list-item-text;
+	background-color: $event-list-item-background;
+	font-weight: 700;
+}
+
+
+
+.c-event-list__item__link {
+	&:link,
+	&:visited {
+		color: $event-list-item-title;
+	}
+}
+
+
+
+.c-event-list__item__title {
+	margin-bottom: 0.5em;
+}
+
+
+
+.c-event-list__item__rating {
+	display: block;
+	width: 100px;
+}
