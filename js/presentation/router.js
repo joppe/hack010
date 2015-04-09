@@ -26,6 +26,8 @@
 
         splash: function () {
             this.model.set('slide', 'splash');
+
+            new presentation.view.Splash();
         },
 
         start: function () {
