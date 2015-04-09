@@ -1,0 +1,28 @@
+﻿
+/**
+ * Wrapper that display the watch image.
+ */
+.watch {
+	position: relative;
+	width: 531px;
+	height: 1061px;
+	margin: 0 auto;
+	background-image: url('../img/watch-background.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+
+
+/**
+ * Container for displaying different views inside the watch.
+ */
+.watch__content {
+	position: relative;
+	top: 323px;
+	left: 41px;
+	width: 449px;
+	height: 441px;
+	border-radius: 6px;
+}
