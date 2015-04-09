@@ -13,7 +13,7 @@
      */
     z.createNamespace('presentation.view');
 
-    presentation.view.Intro = presentation.view.Abstract.extend({
-
+    presentation.view.Splash = presentation.view.Abstract.extend({
+        
     });
 }(zicht, jQuery));

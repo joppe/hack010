@@ -14,13 +14,6 @@
     z.createNamespace('presentation.view');
 
     presentation.view.Splash = presentation.view.Abstract.extend({
-        /**
-         * @param {Object} options
-         */
-        initialize: function (options) {
-            var template = _.template(options.template);
 
-            this.$el = $(template({}));
-        }
     });
 }(zicht, jQuery));

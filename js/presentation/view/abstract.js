@@ -1,11 +1,11 @@
-/*global zicht, Backbone, presentation, _*/
+/*global zicht, Backbone, presentation, _, jQuery*/
 
 /**
  * @author Joppe Aarts <joppe@apestaartje.info>
  * @copyright Apestaartje <http://apestaartje.info>
  */
 
-(function (z) {
+(function (z, $) {
     'use strict';
 
     /**
@@ -14,6 +14,15 @@
     z.createNamespace('presentation.view');
 
     presentation.view.Abstract = Backbone.View.extend({
+        /**
+         * @param {Object} options
+         */
+        initialize: function (options) {
+            var template = _.template(options.template);
+
+            this.$el = $(template({}));
+        },
+
         render: function () {
             return this;
         },
@@ -23,4 +32,4 @@
             this.stopListening();
         }
     });
-}(zicht));
+}(zicht, jQuery));

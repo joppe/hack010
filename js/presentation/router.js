@@ -16,7 +16,8 @@
     presentation.Router = Backbone.Router.extend({
         routes: {
             'splash': 'splash',
-            'intro': 'intro'
+            'intro': 'intro',
+            'event': 'event'
         },
 
         initialize: function (options) {
@@ -39,6 +40,14 @@
 
             this.setActive(new presentation.view.Splash({
                 template: $('#intro-tpl').html()
+            }));
+        },
+
+        event: function () {
+            this.model.set('slide', 'event');
+
+            this.setActive(new presentation.view.Event({
+                template: $('#event-tpl').html()
             }));
         },
 
