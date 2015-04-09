@@ -19,7 +19,10 @@
             'intro': 'intro',
             'event': 'event',
             'map': 'map',
-            'compass': 'compass'
+            'compass': 'compass',
+            'meter': 'meter',
+            'history': 'history',
+            'applause': 'applause'
         },
 
         initialize: function (options) {
@@ -54,6 +57,27 @@
         compass: function () {
             this.setActive('compass', new presentation.view.Compass({
                 template: $('#compass-tpl').html(),
+                model: this.model
+            }));
+        },
+
+        meter: function () {
+            this.setActive('meter', new presentation.view.Meter({
+                template: $('#meter-tpl').html(),
+                model: this.model
+            }));
+        },
+
+        applause: function () {
+            this.setActive('applause', new presentation.view.Applause({
+                template: $('#applause-tpl').html(),
+                model: this.model
+            }));
+        },
+
+        history: function () {
+            this.setActive('history', new presentation.view.History({
+                template: $('#history-tpl').html(),
                 model: this.model
             }));
         },
