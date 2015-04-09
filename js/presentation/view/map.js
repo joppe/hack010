@@ -91,6 +91,10 @@
                     icon: icon
                 });
 
+            google.maps.event.addListener(marker, 'click', function() {
+                window.document.location.hash = 'compass';
+            });
+
             this.markers[type].push(marker);
         },
 
