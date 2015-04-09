@@ -1,2 +1,12 @@
+
+/* Variables */
+@import './vars/colors';
+
+
+/* Base styling */
+@import './base/typography';
+
+
 /* Basic layout */
-@import './base/watch';
+@import './layout/view-info';
+@import './layout/watch';

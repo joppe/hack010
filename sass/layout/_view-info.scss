@@ -1,0 +1,39 @@
+﻿@import '../vars/colors';
+
+
+/* Local variables */
+$view-info-background: $green-jewel;
+$view-info-title: $white;
+$view-info-body: rgba($white, 0.7);
+
+
+/**
+ * Wrapper for displaying presentation different info per view.
+ */
+.view-info {
+	position: fixed;
+	top: 2em;
+	left: 2em;
+	padding: 1em 2em;
+	width: 250px;
+	border-radius: 6px;
+	background-color: $view-info-background;
+}
+
+
+
+/**
+ * Info title.
+ */
+ .view-info__title {
+	color: $view-info-title;
+ }
+
+
+
+ /**
+  * Body copy.
+  */
+ .view-info__body {
+	color: $view-info-body;
+ }
