@@ -5,7 +5,7 @@
  * @copyright Apestaartje <http://apestaartje.info>
  */
 
-(function (z) {
+(function (z, $) {
     'use strict';
 
     /**
@@ -16,10 +16,12 @@
     presentation.Router = Backbone.Router.extend({
         routes: {
             'splash': 'splash',
-            'start': 'start'
+            'intro': 'intro'
         },
 
         initialize: function (options) {
+            this.active = null;
+
             this.model = options.model;
             this.$container = options.$container;
         },
@@ -27,11 +29,26 @@
         splash: function () {
             this.model.set('slide', 'splash');
 
-            new presentation.view.Splash();
+            this.setActive(new presentation.view.Splash({
+                template: $('#splash-tpl').html()
+            }));
         },
 
-        start: function () {
-            this.model.set('slide', 'start');
+        intro: function () {
+            this.model.set('slide', 'intro');
+
+            this.setActive(new presentation.view.Splash({
+                template: $('#intro-tpl').html()
+            }));
+        },
+
+        setActive: function (view) {
+            if (null !== this.active) {
+                this.active.remove();
+            }
+
+            this.active = view;
+            this.$container.html(this.active.render().$el);
         }
     });
-}(zicht));
+}(zicht, jQuery));

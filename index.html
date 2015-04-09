@@ -12,8 +12,10 @@
         <script src="bower_components/backbone/backbone.js"></script>
         <script src="js/lib/zicht.js"></script>
         <script src="js/presentation/model/presentation.js"></script>
+        <script src="js/presentation/view/abstract.js"></script>
         <script src="js/presentation/view/navigation.js"></script>
         <script src="js/presentation/view/splash.js"></script>
+        <script src="js/presentation/view/intro.js"></script>
         <script src="js/presentation/router.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -29,7 +31,7 @@
                     <a href="#splash">Splash</a>
                 </li>
                 <li>
-                    <a href="#start">Start</a>
+                    <a href="#intro">Intro</a>
                 </li>
                 <li>
                     <a href="#setup">Setup</a>
@@ -38,9 +40,17 @@
         </nav>
 
         <script type="text/js-template" id="splash-tpl">
-            // logo
-            <h1>Naam</h1>
-            <img src="img/loading.gif" alt="Loading"/>
+            <div class="screen  screen--start">
+                // logo
+                <h1>Naam</h1>
+                <img src="img/loading.gif" alt="Loading"/>
+            </div>
+        </script>
+
+        <script type="text/js-template" id="intro-tpl">
+            <div class="screen  screen--intro">
+                <p>intro</p>
+            </div>
         </script>
     </body>
 </html>

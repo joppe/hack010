@@ -13,14 +13,14 @@
      */
     z.createNamespace('presentation.view');
 
-    presentation.view.Splash = presentation.view.Abstract.extend({
-        /**
-         * @param {Object} options
-         */
-        initialize: function (options) {
-            var template = _.template(options.template);
+    presentation.view.Abstract = Backbone.View.extend({
+        render: function () {
+            return this;
+        },
 
-            this.$el = template({});
+        remove: function () {
+            this.$el.remove();
+            this.stopListening();
         }
     });
 }(zicht));
