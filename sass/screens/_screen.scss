@@ -1,7 +1,7 @@
 @import './../vars/colors';
 
 /* Local variables */
-$screen-background: $grey-silver-chalice;
+$screen-background: $grey-alto;
 
 
 /**
@@ -12,6 +12,9 @@ $screen-background: $grey-silver-chalice;
     width: 100%;
     min-height: 100%;
 	padding: 1em;
-    background-color: $screen-background;
 	border-radius: 6px;
+    background-color: $screen-background;
+	background-image: url('../img/screen-background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
