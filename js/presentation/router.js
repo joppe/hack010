@@ -17,7 +17,8 @@
         routes: {
             'splash': 'splash',
             'intro': 'intro',
-            'event': 'event'
+            'event': 'event',
+            'map': 'map'
         },
 
         initialize: function (options) {
@@ -25,42 +26,56 @@
 
             this.model = options.model;
             this.$container = options.$container;
+            this.$parent = $(this.$container.parent());
         },
 
         splash: function () {
-            this.model.set('slide', 'splash');
-
-            this.setActive(new presentation.view.Splash({
+            this.setActive('splash', new presentation.view.Splash({
                 template: $('#splash-tpl').html(),
                 model: this.model
             }));
         },
 
         intro: function () {
-            this.model.set('slide', 'intro');
-
-            this.setActive(new presentation.view.Splash({
+            this.setActive('intro', new presentation.view.Splash({
                 template: $('#intro-tpl').html(),
                 model: this.model
             }));
         },
 
         event: function () {
-            this.model.set('slide', 'event');
-
-            this.setActive(new presentation.view.Event({
+            this.setActive('event', new presentation.view.Event({
                 template: $('#event-tpl').html(),
                 model: this.model
             }));
         },
 
-        setActive: function (view) {
+        map: function () {
+            this.setActive('map', new presentation.view.Map({
+                template: $('#map-tpl').html(),
+                model: this.model
+            }));
+        },
+
+        setActive: function (identifier, view) {
+            var $new,
+                old,
+                offset;
+
             if (null !== this.active) {
-                this.active.remove();
+                old = this.active;
             }
 
+            this.model.set('slide', identifier);
             this.active = view;
-            this.$container.html(this.active.render().$el);
+
+            $new = this.active.render().$el;
+            this.$container.append($new);
+
+            offset = $new.position();
+            this.$container.animate({
+                top: -offset.top
+            });
         }
     });
 }(zicht, jQuery));

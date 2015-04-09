@@ -24,5 +24,16 @@
 	left: 41px;
 	width: 449px;
 	height: 441px;
+    overflow: hidden;
 	border-radius: 6px;
+}
+
+
+
+.watch__scrollable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }

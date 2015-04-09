@@ -17,6 +17,7 @@
         <script src="js/presentation/view/splash.js"></script>
         <script src="js/presentation/view/event.js"></script>
         <script src="js/presentation/view/intro.js"></script>
+        <script src="js/presentation/view/map.js"></script>
         <script src="js/presentation/router.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -28,8 +29,10 @@
             </div>
         </header>
         <main class="watch" role="main">
-            <div class="watch__content  js-watch-views">
+            <div class="watch__content">
+                <div class="watch__scrollable  js-watch-views">
 
+                </div>
             </div>
         </main>
         <nav class="view-navigation">
@@ -38,15 +41,13 @@
                     <a href="#splash" class="u-hide-text  view-navigation__link">Splash</a>
                 </li>
                 <li class="o-interface-list__item">
-                    <a href="#start" class="u-hide-text  view-navigation__link">Start</a>
+                    <a href="#intro" class="u-hide-text view-navigation__link">Intro</a>
                 </li>
                 <li class="o-interface-list__item">
-                    <a href="#setup" class="u-hide-text view-navigation__link">Setup</a>
-                <li  class="o-interface-list__item">
-                    <a href="#intro" class="u-hide-text  view-navigation__link">Intro</a>
+                    <a href="#event" class="u-hide-text view-navigation__link">Event</a>
                 </li>
-                <li  class="o-interface-list__item">
-                    <a href="#event" class="u-hide-text u-no-margin view-navigation__link">Event</a>
+                <li class="o-interface-list__item">
+                    <a href="#map" class="u-hide-text u-no-margin view-navigation__link">Map</a>
                 </li>
             </ul>
         </nav>
@@ -63,6 +64,10 @@
             <div class="screen  screen--intro">
                 <p>intro</p>
             </div>
+        </script>
+
+        <script type="text/js-template" id="map-tpl">
+            <div class="screen  screen--map" id="map"></div>
         </script>
 
         <script type="text/js-template" id="event-tpl">
