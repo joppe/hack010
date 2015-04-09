@@ -5,6 +5,7 @@ var markers = {
     },
     map;
 
+
 function initialize() {
 		var mapOptions = {
     		zoom: 13,
@@ -68,9 +69,19 @@ function setMarkersLocation(map, locations) {
 		    map: map,
 		    icon: iconlocation
 		});
+
+		/*
+		var infoWindow = new google.maps.InfoWindow();
+
+        google.maps.event.addListener(marker, 'click', function () {
+            var markerContent = location[1];
+            console.log(location[0]);
+            infoWindow.setContent(markerContent);
+            infoWindow.open(map, this);
+        });
+		*/
+
 		markers.locations.push(marker);
-		//marker.setMap(null);
-		//marker.setVisible(false); 
 	}
 }
 
@@ -104,7 +115,6 @@ function setMarkersGuides(map, locations) {
 		    icon: iconguides
 		});
 		markers.guides.push(marker);
-		//marker.setMap(null);
 	}
 }
 
@@ -136,8 +146,6 @@ function setMarkersUsers(map, locations) {
 		    icon: iconusers
 		});
 		markers.users.push(marker);
-		//marker.setMap(null);
-		//marker.setVisible(false); 
 	}
 }
 
