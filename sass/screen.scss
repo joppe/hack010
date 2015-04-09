@@ -1,6 +1,7 @@
 
 /* Variables */
 @import './vars/colors';
+@import './vars/fonts';
 
 
 /* Base styling */
@@ -18,9 +19,14 @@
 @import './objects/interface-list';
 
 
+/* UI components */
+@import './components/slide';
+
+
 /* Screens */
 @import './screens/screen';
 @import './screens/splash';
+@import './screens/intro';
 
 
 /* Utilties */
