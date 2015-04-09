@@ -30,13 +30,17 @@
             var event = this.model.get('event');
 
             this.$el.find('.' + ACTIVE_CLASS).removeClass(ACTIVE_CLASS);
-            this.$el.find('[href="#' + event + '"]').addClass(ACTIVE_CLASS);
+            this.$el.find('[href="#' + event + '"]').parent().addClass(ACTIVE_CLASS);
         },
 
         onClick: function (event) {
             event.preventDefault();
 
             var $el = $(event.target);
+
+            if ($el.get(0).tagName.toLowerCase() !== 'a') {
+                $el = $el.closest('a');
+            }
 
             this.model.set('event', $el.attr('href').replace('#', ''));
         }
