@@ -30,6 +30,8 @@
             }, 2000);
         };
 
+        win.document.location.hash = 'splash';
+
         google.maps.event.addDomListener(window, 'load', initialize);
     });
 }(window, jQuery));

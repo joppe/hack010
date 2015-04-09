@@ -64,42 +64,35 @@
         </script>
 
         <script type="text/js-template" id="intro-tpl">
-            <div class="screen  screen--intro">
+            <div class="s-screen  screen--intro">
                 <p>intro</p>
             </div>
         </script>
 
         <script type="text/js-template" id="map-tpl">
-            <div class="screen  screen--map">
+            <div class="s-screen  s-map">
                 <div id="panel">
-                    <input data-action="hide" type="button" value="Hide Markers">
-                    <input data-action="show" type="button" value="Show All Markers">
+                    <a href="#guides" data-is-showing="true">
+                        <img src="img/icon_guide_bottom.png">
+                        <img src="img/icon_guide_bottom_off.png" style="display:none">
+                    </a>
 
-                    <input onclick="hide('locations');" type="button" value="Hide Locations">
-                    <input onclick="hide('guides');" type="button" value="Hide Guides">
-                    <input onclick="hide('users');" type="button" value="Hide Users">
+                    <a href="#users" data-is-showing="true">
+                        <img src="img/icon_user_bottom.png">
+                        <img src="img/icon_user_bottom_off.png" style="display:none">
+                    </a>
 
-                    <span id="locationToggle">
-                        <img src="../img/icon_location.png">
-                        <img src="../img/icon_guide.png" style="display:none">
-                    </span>
-
-                    <span id="guideToggle">
-                        <img src="../img/icon_guide.png">
-                        <img src="../img/icon_location.png" style="display:none">
-                    </span>
-
-                    <span id="userToggle">
-                        <img src="../img/icon_user.png">
-                        <img src="../img/icon_location.png" style="display:none">
-                    </span>
+                    <a href="#locations" data-is-showing="true">
+                        <img src="img/icon_location_bottom.png">
+                        <img src="img/icon_location_bottom_off.png" style="display:none">
+                    </a>
                 </div>
                 <div id="map-canvas"></div>
             </div>
         </script>
 
         <script type="text/js-template" id="event-tpl">
-            <div class="screen  screen--intro">
+            <div class="s-screen  screen--intro">
                 <h1>Select event</h1>
                 <ul class="event-list">
                     <li>
